@@ -1,0 +1,16 @@
+EXPERIMENT 11
+1.
+Find the number of Artists in the studio (without a HAVING clause)
+SELECT COUNT(*) AS num_artists
+FROM employees
+WHERE role = 'Artist';
+2.
+Find the number of Employees of each role in the studio
+SELECT role, COUNT(*) AS num_employees
+FROM employees
+GROUP BY role;
+3.
+Find the total number of years employed by all Engineers
+SELECT SUM(years_employed) AS total_years
+FROM employees
+WHERE role = 'Engineer';
